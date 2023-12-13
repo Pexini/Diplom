@@ -292,8 +292,8 @@
 
 <h5> <li> Проверяем поочередно на 2-х БД:</li> </h5>
 </ol>
-MySQL;
-PostgreSQL.
+<li>MySQL;</li><br>
+<li>PostgreSQL.</li>
 
 Позитивные сценарии:
 
