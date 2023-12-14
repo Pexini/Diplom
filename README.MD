@@ -34,7 +34,8 @@
 <ol>
 <li> Проанализировать тестк сценарий, согласно указанному плану в файле Plan.md </li>
 <li> Через терминал запустить Docker контейнер командой: docker-compose up --build </li>
-<li> Через терминал открыть БД MySQL командой: java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar aqa-shop.jar </li>
+<li> Через терминал открыть БД MySQL командой: java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar aqa-shop.jar </li>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
+
 
 </ol>
