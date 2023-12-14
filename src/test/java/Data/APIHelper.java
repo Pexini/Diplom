@@ -8,13 +8,14 @@ import io.restassured.response.ValidatableResponse;
 
 import static io.restassured.RestAssured.given;
 
-public class APIHelper { private static RequestSpecification requestSpec = new RequestSpecBuilder()
-        .setBaseUri("http://localhost")
-        .setPort(8080)
-        .setAccept(ContentType.JSON)
-        .setContentType(ContentType.JSON)
-        .log(LogDetail.ALL)
-        .build();
+public class APIHelper {
+    private static RequestSpecification requestSpec = new RequestSpecBuilder()
+            .setBaseUri("http://localhost")
+            .setPort(8080)
+            .setAccept(ContentType.JSON)
+            .setContentType(ContentType.JSON)
+            .log(LogDetail.ALL)
+            .build();
 
     public static void sendRequest(String body, int statusCode, String endpoint) {
         given()
