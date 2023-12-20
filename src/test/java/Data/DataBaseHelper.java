@@ -1,4 +1,5 @@
 package Data;
+
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
 
@@ -6,6 +7,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import static java.sql.DriverManager.getConnection;
+
 public class DataBaseHelper {
     private static final QueryRunner runner = new QueryRunner();
 
