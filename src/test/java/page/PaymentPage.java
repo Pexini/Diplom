@@ -1,8 +1,8 @@
-package Page;
+package page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import Data.DataHelper;
+import data.DataHelper;
 
 import java.time.Duration;
 

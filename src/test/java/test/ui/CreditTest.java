@@ -1,14 +1,14 @@
-package Test.UI;
+package test.ui;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import Data.DataBaseHelper;
-import Data.DataHelper;
+import data.DataBaseHelper;
+import data.DataHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import Page.DashboardPage;
+import page.DashboardPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;

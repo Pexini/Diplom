@@ -1,8 +1,8 @@
-package Page;
+package page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import Data.DataHelper;
+import data.DataHelper;
 
 import java.time.Duration;
 
@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class CreditPage {
     private final SelenideElement header = $(byText("Кредит по данным карты"));
     private final SelenideElement number = $("[placeholder='0000 0000 0000 0000']");
-    private final SelenideElement month = $("[placeholder='12']");
+    private final SelenideElement month = $("[placeholder='08']");
     private final SelenideElement year = $("[placeholder='22']");
     private final SelenideElement holder = $(byText("Владелец")).parent().$(".input__control");
     private final SelenideElement cvc = $("[placeholder='999']");
