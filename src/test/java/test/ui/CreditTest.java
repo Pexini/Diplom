@@ -101,6 +101,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongDateFormat();
     }
+
     @Test
     @DisplayName("Card with month with one zero")
     void shouldFailValidationCardWith1NumberMonth() {
@@ -109,6 +110,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with month number 13")
     void shouldFailValidationWithMonthAbove12() {
@@ -117,6 +119,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongDateFormat();
     }
+
     @Test
     @DisplayName("Card with empty year")
     void shouldFailValidationCardWithEmptyYear() {
@@ -125,6 +128,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with last year")
     void shouldFailValidationCardWithLastYear() {
@@ -133,6 +137,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingCardEnded();
     }
+
     @Test
     @DisplayName("Card with year with one number")
     void shouldFailValidationCardWith1NumberYear() {
@@ -141,6 +146,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with empty owner")
     void shouldFailValidationCardWithEmptyOwner() {
@@ -148,6 +154,25 @@ public class CreditTest {
         var cardInfo = DataHelper.getCardInfoWithNullOwner();
         creditPage.inputData(cardInfo);
         creditPage.checkingEmptyField();
+    }
+
+    @Test
+    @DisplayName("Card with owner with name of numbers")
+    void shouldFailValidationCardWithOwnerWithNumbers() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithOwnerWithNumbers();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+
+
+    @Test
+    @DisplayName("Card with owner with name with cyrillic")
+    void shouldFailValidationCardWithNameWithCyrillic() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithOwnerCyrillic();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
     }
 
 
