@@ -36,7 +36,7 @@
 <li> Через терминал запустить Docker контейнер командой: docker-compose up --build </li>
 <li> Через терминал открыть БД MySQL командой: <br> java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar aqa-shop.jar </li>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
-<li> Запустить DBeaver, создать соединения с MySQL, PostgreSQL </li>
+<li> Запустить DBeaver, проверить соединения с MySQL, PostgreSQL </li>
 
 
 </ol>
