@@ -174,6 +174,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with owner with name with special characters")
     void shouldFailValidationCardWithNameSpecialCharacters() {
@@ -182,6 +183,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with empty CVC")
     void shouldFailValidationCardWithEmptyCVC() {
@@ -190,6 +192,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingEmptyField();
     }
+
     @Test
     @DisplayName("Card with 2 numbers in CVC")
     void shouldFailValidationCardWith2NumbersInCVC() {
@@ -198,6 +201,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with 1 numbers in CVC")
     void shouldFailValidationCardWith1NumberInCVC() {
