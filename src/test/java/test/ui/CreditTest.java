@@ -174,6 +174,38 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+    @Test
+    @DisplayName("Card with owner with name with special characters")
+    void shouldFailValidationCardWithNameSpecialCharacters() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithOwnerSpecialCharacters();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+    @Test
+    @DisplayName("Card with empty CVC")
+    void shouldFailValidationCardWithEmptyCVC() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithEmptyCVC();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingEmptyField();
+    }
+    @Test
+    @DisplayName("Card with 2 numbers in CVC")
+    void shouldFailValidationCardWith2NumbersInCVC() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithCVC2Numbers();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+    @Test
+    @DisplayName("Card with 1 numbers in CVC")
+    void shouldFailValidationCardWith1NumberInCVC() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithCVC1Numbers();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
 
 
 }
