@@ -56,6 +56,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingEmptyField();
     }
+
     @Test
     @DisplayName("Card with empty number")
     void shouldFailValidationWithEmptyCardNumber() {
@@ -64,6 +65,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
     }
+
     @Test
     @DisplayName("Card with random number")
     void shouldDeclineTransactionCardWithRandomNumber() {
@@ -72,6 +74,7 @@ public class CreditTest {
         creditPage.inputData(cardInfo);
         creditPage.getErrorNotification();
     }
+
     @Test
     @DisplayName("Card with 15 numbers")
     void shouldFailValidationWithCard15Numbers() {
@@ -79,6 +82,72 @@ public class CreditTest {
         var cardInfo = DataHelper.getCardInfoWith15();
         creditPage.inputData(cardInfo);
         creditPage.checkingWrongFormat();
+    }
+
+    @Test
+    @DisplayName("Card with empty month")
+    void shouldFailValidationCardWithEmptyMonth() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithNullMonth();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+
+    @Test
+    @DisplayName("Card with two zero in month")
+    void shouldFailValidationCardWithZeroInMonth() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithMonthWithTwoZero();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongDateFormat();
+    }
+    @Test
+    @DisplayName("Card with month with one zero")
+    void shouldFailValidationCardWith1NumberMonth() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithMonthWithZero();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+    @Test
+    @DisplayName("Card with month number 13")
+    void shouldFailValidationWithMonthAbove12() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWith13Month();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongDateFormat();
+    }
+    @Test
+    @DisplayName("Card with empty year")
+    void shouldFailValidationCardWithEmptyYear() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithNullYear();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+    @Test
+    @DisplayName("Card with last year")
+    void shouldFailValidationCardWithLastYear() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithLastYear();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingCardEnded();
+    }
+    @Test
+    @DisplayName("Card with year with one number")
+    void shouldFailValidationCardWith1NumberYear() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWith1NumberYear();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingWrongFormat();
+    }
+    @Test
+    @DisplayName("Card with empty owner")
+    void shouldFailValidationCardWithEmptyOwner() {
+        var creditPage = page.creditButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithNullOwner();
+        creditPage.inputData(cardInfo);
+        creditPage.checkingEmptyField();
     }
 
 
