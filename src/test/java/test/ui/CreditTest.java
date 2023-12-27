@@ -157,7 +157,7 @@ public class CreditTest {
     }
 
     @Test
-    @DisplayName("Card with owner with name of numbers")
+    @DisplayName("Card with owner with name with numbers")
     void shouldFailValidationCardWithOwnerWithNumbers() {
         var creditPage = page.creditButtonClick();
         var cardInfo = DataHelper.getCardInfoWithOwnerWithNumbers();

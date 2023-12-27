@@ -131,4 +131,90 @@ public class PayTest {
         paymentPage.inputData(cardInfo);
         paymentPage.checkingWrongFormat();
     }
+
+    @Test
+    @DisplayName("Card with last year")
+    void shouldFailValidationCardWithLastYear() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithLastYear();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingCardEnded();
+    }
+
+    @Test
+    @DisplayName("Card with year with one number")
+    void shouldFailValidationCardWith1NumberYear() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWith1NumberYear();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingWrongFormat();
+    }
+
+    @Test
+    @DisplayName("Card with empty owner")
+    void shouldFailValidationCardWithEmptyOwner() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithNullOwner();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingEmptyField();
+    }
+
+    @Test
+    @DisplayName("Card with owner with name with numbers")
+    void shouldFailValidationCardWithOwnerWithNumbers() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithOwnerWithNumbers();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingWrongFormat();
+    }
+
+    @Test
+    @DisplayName("Card with owner with name with cyrillic")
+    void shouldFailValidationCardWithNameWithCyrillic() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithOwnerCyrillic();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingWrongFormat();
+    }
+
+
+    @Test
+    @DisplayName("Card with owner with name with special characters")
+    void shouldFailValidationCardWithNameSpecialCharacters() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithOwnerSpecialCharacters();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingWrongFormat();
+    }
+
+    @Test
+    @DisplayName("Card with empty CVC")
+    void shouldFailValidationCardWithEmptyCVC() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithEmptyCVC();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingEmptyField();
+    }
+
+
+    @Test
+    @DisplayName("Card with 2 numbers in CVC")
+    void shouldFailValidationCardWith2NumbersInCVC() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithCVC2Numbers();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingWrongFormat();
+    }
+
+
+    @Test
+    @DisplayName("Card with 1 numbers in CVC")
+    void shouldFailValidationCardWith1NumbersInCVC() {
+        var paymentPage = page.paymentButtonClick();
+        var cardInfo = DataHelper.getCardInfoWithCVC1Numbers();
+        paymentPage.inputData(cardInfo);
+        paymentPage.checkingWrongFormat();
+
+
+    }
 }
