@@ -30,6 +30,6 @@
    </ol>
 
 Отчет по результатам тестирования (Allure Report):
+![Allure report1.png](/home/pix/Documents/Diplom/Allure Report/Allure report1.png)
 
-![Screenshot from 2023-12-28 17-10-53.png](..%2F..%2F..%2F..%2F..%2FPictures%2FScreenshots%2FScreenshot%20from%202023-12-28%2017-10-53.png)
 
