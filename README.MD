@@ -36,7 +36,14 @@
 <li> Через терминал запустить Docker контейнер командой: docker-compose up --build </li>
 <li> Через терминал открыть БД MySQL командой: <br> java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar aqa-shop.jar </li>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
-<li> Запустить DBeaver, проверить соединения с MySQL, PostgreSQL </li>
-
-
+<li> Запустить DBeaver, проверить соединения с MySQL</li>
+<li> Запустить отчеты командой в терминале: <br>
+<li> ./gradlew allureServe</li>
+<li> Остановить allureServe командой в терминале: CTRL + C</li>
+<li> Через терминал открыть БД PostgresSQL из терминала командой: <br>
+<li> java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar aqa-shop.jar </li>
+<li> Запустить отчеты командой в терминале: <br>
+<li> ./gradlew allureServe</li>
+<li> Остановить приложение из терминала командой: CTRL + C </li>
+<li> Остановить контейнеры Docker из терминала : docker-compose down</li>
 </ol>
