@@ -42,7 +42,10 @@
 <h5> Созданы баг-репорты по найденным дефектам. </h5>
 <li> Баги указаны в <a href="https://github.com/Pexini/Diplom/issues"> Issue </a> </li>
 
-<h4> Общий итог по времени </h4>
+<h4> Общие рекомендации: </h4>
+ <ol>
+<li>Исправить баги указанные <a href="https://github.com/Pexini/Diplom/issues"> Issue </a>  </li>
+</ol>
 
 
 
