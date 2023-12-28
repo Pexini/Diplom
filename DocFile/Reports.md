@@ -37,6 +37,8 @@
 ![AllurePackagesCreditUiTest](https://github.com/Pexini/Diplom/assets/129457583/772a156f-75eb-47ef-9fda-d48fb0a91d4b)
 ![AllurePackedgesPayUiTest](https://github.com/Pexini/Diplom/assets/129457583/146d3093-a992-4f08-b9ec-80397faa54f3)
 
+<h5> Cозданы баг-репорты по найденным дефектам. </h5>
+<li> Баги указаны в <a href="https://github.com/Pexini/Diplom/issues"> Issue </a> </li>
 
 
 
