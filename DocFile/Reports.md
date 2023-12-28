@@ -27,9 +27,11 @@
 <ol>
    <li> Успешных(passed): 40 (63.15 %) </li>
    <li> Неуспешных(failed): 16 (36.85 %) </li>
+   <li> Итого 71.42% </li>
    </ol>
 
 Отчет по результатам тестирования (Allure Report): <br>
+
 ![Allure report1](https://github.com/Pexini/Diplom/assets/129457583/9ea52c14-6a8f-4a9e-b4b9-fba8d880ce5a)
 ![Allure Graphs](https://github.com/Pexini/Diplom/assets/129457583/a8fd0ac5-ec4f-4061-a9f5-3c409f2511a8)
 ![AllureSuites](https://github.com/Pexini/Diplom/assets/129457583/a7661d60-6ae9-447f-ac71-0568d7997411)
@@ -37,8 +39,11 @@
 ![AllurePackagesCreditUiTest](https://github.com/Pexini/Diplom/assets/129457583/772a156f-75eb-47ef-9fda-d48fb0a91d4b)
 ![AllurePackedgesPayUiTest](https://github.com/Pexini/Diplom/assets/129457583/146d3093-a992-4f08-b9ec-80397faa54f3)
 
-<h5> Cозданы баг-репорты по найденным дефектам. </h5>
+<h5> Созданы баг-репорты по найденным дефектам. </h5>
 <li> Баги указаны в <a href="https://github.com/Pexini/Diplom/issues"> Issue </a> </li>
+
+<h4> Общий итог по времени </h4>
+
 
 
 
