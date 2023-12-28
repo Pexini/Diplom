@@ -53,6 +53,7 @@ public class CreditApiTest {
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(1, countOrder);
     }
+
     @Test
     void shouldRespondWithStatus400IfAllFieldsAreEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyFields();
@@ -61,6 +62,7 @@ public class CreditApiTest {
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
+
     @Test
     void shouldRespondWithStatus400IfFieldNumberIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyNumber();
@@ -69,6 +71,7 @@ public class CreditApiTest {
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
+
     @Test
     void shouldRespondWithStatus400IfFieldMonthIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullMonth();
@@ -77,6 +80,7 @@ public class CreditApiTest {
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
+
     @Test
     void shouldRespondWithStatus400IfFieldYearIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullYear();
@@ -85,6 +89,7 @@ public class CreditApiTest {
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
+
     @Test
     void shouldRespondWithStatus400IfFieldHolderIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullOwner();
@@ -93,6 +98,7 @@ public class CreditApiTest {
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
+
     @Test
     void shouldRespondWithStatus400IfFieldCVCIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyCVC();
