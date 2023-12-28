@@ -29,7 +29,8 @@
    <li> Неуспешных(failed): 16 (36.85 %) </li>
    </ol>
 
-Отчет по результатам тестирования (Allure Report):
-![Allure report1.png](/home/pix/Documents/Diplom/Allure Report/Allure report1.png)
+Отчет по результатам тестирования (Allure Report): <br>
+![Allure report1.png](..%2F..%2F..%2F..%2F..%2FDocuments%2FDiplom%2FAllure%20Report%2FAllure%20report1.png)
+
 
 
