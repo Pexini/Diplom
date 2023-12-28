@@ -44,7 +44,7 @@
 
 <h4> Общие рекомендации: </h4>
  <ol>
-<li>Исправить баги указанные <a href="https://github.com/Pexini/Diplom/issues"> Issue </a>  </li>
+<li>Исправить баги указанные в <a href="https://github.com/Pexini/Diplom/issues"> Issue </a>  </li>
 </ol>
 
 
