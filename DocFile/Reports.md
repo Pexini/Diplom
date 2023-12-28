@@ -30,7 +30,8 @@
    </ol>
 
 Отчет по результатам тестирования (Allure Report): <br>
-![Allure report1.png](..%2F..%2F..%2F..%2F..%2FDocuments%2FDiplom%2FAllure%20Report%2FAllure%20report1.png)
+![Allure report1](https://github.com/Pexini/Diplom/assets/129457583/9ea52c14-6a8f-4a9e-b4b9-fba8d880ce5a)
+
 
 
 
