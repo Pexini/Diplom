@@ -136,7 +136,7 @@ public class DataHelper {
 
 
     public static CardInfo getCardInfoWithNullYear() {
-        return new CardInfo(getDeclinedCardNumber(),
+        return new CardInfo(getApprovedCardNumber(),
                 generateMonth(0),
                 null,
                 generateHolderName(),

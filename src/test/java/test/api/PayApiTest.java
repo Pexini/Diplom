@@ -7,12 +7,15 @@ import data.DataBaseHelper;
 import data.DataHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import static data.DataBaseHelper.cleanDataBase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CreditApiTest {
+public class PayApiTest {
     private static DataHelper.CardInfo cardInfo;
     private static final Gson gson = new Gson();
 
@@ -31,24 +34,23 @@ public class CreditApiTest {
         cleanDataBase();
     }
 
-
     @Test
     void shouldRespondWithStatusCode200WithApprovedCard() {
         cardInfo = DataHelper.getValidDataWithApprovedCard();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 200, "/api/v1/credit");
-        val actual = DataBaseHelper.getStatusCreditRequest();
+        APIHelper.sendRequest(body, 200, "/api/v1/pay");
+        val actual = DataBaseHelper.getStatusPaymentRequest();
         assertEquals("APPROVED", actual);
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(1, countOrder);
     }
 
     @Test
-    void shouldRespondWithStatusCode200WithDeclinedCard() {
+    void shouldRespondWithStatusCode400WithDeclinedCard() {
         cardInfo = DataHelper.getValidDataWithDeclinedCard();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 200, "/api/v1/credit");
-        val actual = DataBaseHelper.getStatusCreditRequest();
+        APIHelper.sendRequest(body, 200, "/api/v1/pay");
+        val actual = DataBaseHelper.getStatusPaymentRequest();
         assertEquals("DECLINED", actual);
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(1, countOrder);
@@ -58,7 +60,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfAllFieldsAreEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyFields();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 500, "/api/v1/pay");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -67,7 +69,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfCardNumberIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyNumber();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 500, "/api/v1/pay");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -76,7 +78,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldMonthIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullMonth();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 500, "/api/v1/pay");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -85,7 +87,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldYearIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullYear();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 500, "/api/v1/pay");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -94,7 +96,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldHolderIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullOwner();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 500, "/api/v1/pay");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -103,8 +105,9 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldCVCIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyCVC();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 500, "/api/v1/pay");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
 }
+
