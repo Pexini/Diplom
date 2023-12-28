@@ -42,8 +42,15 @@
 <li> Остановить allureServe командой в терминале: CTRL + C</li>
 <li> Через терминал открыть БД PostgresSQL из терминала командой: <br>
 <li> java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar aqa-shop.jar </li>
+</ol>
+<h3> Создание отчетов </h3>
+<ol>
 <li> Запустить отчеты командой в терминале: <br>
 <li> ./gradlew allureServe</li>
+</ol>
+
+<h3> Завершение работы </h3>
+<ol>
 <li> Остановить приложение из терминала командой: CTRL + C </li>
 <li> Остановить контейнеры Docker из терминала : docker-compose down</li>
 </ol>
