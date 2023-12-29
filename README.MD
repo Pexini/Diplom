@@ -33,7 +33,7 @@
 <h3> Начало работы </h3>
 <ol>
 <li> Чтобы получить локальную копию проекта, необходимо склонировать репозиторий </li>
-<li> git clone git@github.com: <a href="https://github.com/Pexini/Diplom.git" Davydov.P Diplom> </li>
+<li> git clone git@github.com: <a href="https://github.com/Pexini/Diplom.git" > Davydov.P Diplom </a>> </li>
 <li> Проанализировать тест сценарий, согласно указанному плану в файле Plan.md </li>
 <li> Через терминал запустить Docker контейнер командой: docker-compose up --build </li>
 <li> Через терминал открыть БД MySQL командой: <br> java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar aqa-shop.jar </li>
