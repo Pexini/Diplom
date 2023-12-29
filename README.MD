@@ -37,7 +37,7 @@
 <h4>Для работы с БД PostgresSQL</h4>
 <ol>
 <li> Через терминал открыть БД PostgresSQL из терминала командой: <br> </li>
-*java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar aqa-shop.jar*
+**java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar aqa-shop.jar**
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
 <li> Запустить DBeaver, проверить соединения с PostgresSQL</li>
 <li> Запустить отчеты командой в терминале: <br>
