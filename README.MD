@@ -26,7 +26,7 @@
 <h4> Для работы с БД MySQL </h4>
 <ol>
 <li> Через терминал открыть БД MySQL командой: <br> </li>
-<p><u> java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar aqa-shop.jar </u></p>
+<p> java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar aqa-shop.jar </p>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
 <li> Запустить DBeaver, проверить соединения с MySQL</li>
 <li> Запустить отчеты командой в терминале: <br>
