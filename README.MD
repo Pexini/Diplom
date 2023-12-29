@@ -20,7 +20,6 @@
 <li> c помощью команды git clone и вставить ссылку: </li>
      для HTTPS:  https://github.com/Pexini/Diplom.git <br>
      для SSH: git@github.com:Pexini/Diplom.git <br>
-<li> Проанализировать тест сценарий, согласно указанному плану в файле Plan.md </li>
 <li> Через терминал запустить Docker контейнер командой: docker-compose up --build </li>
 </ol>
 
