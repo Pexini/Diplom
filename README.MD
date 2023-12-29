@@ -38,8 +38,10 @@
      для SSH: git@github.com:Pexini/Diplom.git <br>
 <li> Проанализировать тест сценарий, согласно указанному плану в файле Plan.md </li>
 <li> Через терминал запустить Docker контейнер командой: docker-compose up --build </li>
-<h4> Для работы с БД MySQL</h4>
-<ol></ol>
+</ol>
+
+<h4> Для работы с БД MySQL </h4>
+<ol>
 <li> Через терминал открыть БД MySQL командой: <br> 
 java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar aqa-shop.jar </li>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
@@ -47,7 +49,8 @@ java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar aqa-shop.jar <
 <li> Запустить отчеты командой в терминале: <br>
 <li> ./gradlew allureServe</li>
 <li> Остановить allureServe командой в терминале: CTRL + C</li>
-</ol>
+</ol> 
+
 <h4>Для работы с БД PostgresSQL</h4>
 <ol>
 <li> Запустить DBeaver, проверить соединения с PostgresSQL</li>
