@@ -76,7 +76,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldMonthIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullMonth();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 400, "/api/v1/credit");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -85,7 +85,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldYearIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullYear();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 400, "/api/v1/credit");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -94,7 +94,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldHolderIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithNullOwner();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 400, "/api/v1/credit");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
@@ -103,7 +103,7 @@ public class CreditApiTest {
     void shouldRespondWithStatus400IfFieldCVCIsEmpty() {
         cardInfo = DataHelper.getCardInfoWithEmptyCVC();
         var body = gson.toJson(cardInfo);
-        APIHelper.sendRequest(body, 500, "/api/v1/credit");
+        APIHelper.sendRequest(body, 400, "/api/v1/credit");
         val countOrder = DataBaseHelper.getCountOrderEntity();
         assertEquals(0, countOrder);
     }
