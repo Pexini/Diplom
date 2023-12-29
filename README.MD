@@ -25,8 +25,8 @@
 
 <h4> Для работы с БД MySQL </h4>
 <ol>
-<li> Через терминал открыть БД MySQL командой: <br> 
-<strong> java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar aqa-shop.jar  </strong>
+<li> Через терминал открыть БД MySQL командой: <br> </li>
+<u> java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar aqa-shop.jar </u>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
 <li> Запустить DBeaver, проверить соединения с MySQL</li>
 <li> Запустить отчеты командой в терминале: <br>
@@ -37,7 +37,7 @@
 <h4>Для работы с БД PostgresSQL</h4>
 <ol>
 <li> Через терминал открыть БД PostgresSQL из терминала командой: <br> </li>
-**java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar aqa-shop.jar**
+<u>java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar aqa-shop.jar</u>
 <li> В браузере Сhrome открыть URL http://localhost/8080 </li>
 <li> Запустить DBeaver, проверить соединения с PostgresSQL</li>
 <li> Запустить отчеты командой в терминале: <br>
